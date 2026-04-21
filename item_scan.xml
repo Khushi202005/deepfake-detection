@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FILE: res/layout/item_scan.xml -->
+<!-- EXACT MATCH to dark card design in screenshot -->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    android:backgroundTint="#3C3C3C">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <!-- ══════ LEFT: Type Icon ══════ -->
+        <LinearLayout
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/scan_icon_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/ivScanTypeIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@android:drawable/ic_menu_gallery"
+                android:tint="#FFFFFF"
+                android:contentDescription="Scan type" />
+        </LinearLayout>
+
+        <!-- ══════ MIDDLE: Info Section ══════ -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:orientation="vertical">
+
+            <!-- Type Label -->
+            <TextView
+                android:id="@+id/tvScanType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🖼 IMAGE"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <!-- Filename -->
+            <TextView
+                android:id="@+id/tvScanFilename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="temp_image_1771351139413.jpg"
+                android:textColor="#CCCCCC"
+                android:textSize="11sp" />
+
+            <!-- Confidence -->
+            <TextView
+                android:id="@+id/tvScanConfidence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Confidence: 79.9%"
+                android:textColor="#FFB74D"
+                android:textSize="12sp" />
+
+            <!-- User -->
+            <TextView
+                android:id="@+id/tvScanUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="👤 Test User"
+                android:textColor="#42A5F5"
+                android:textSize="11sp" />
+
+            <!-- Date/Time -->
+            <TextView
+                android:id="@+id/tvScanDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="🕐 2026-02-18 00:35:16"
+                android:textColor="#999999"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- ══════ RIGHT: Result Badge ══════ -->
+        <TextView
+            android:id="@+id/tvScanResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/result_badge_real"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:text="REAL"
+            android:textColor="#4CAF50"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

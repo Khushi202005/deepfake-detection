@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/activity_splash.xml — REPLACE your existing file -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/splash_bg">
+
+    <!-- Layer 1: Floating particles -->
+    <com.deepguard.app.views.ParticleView
+        android:id="@+id/particleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Layer 2: All content centered together -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Logo + ShieldDotView stacked -->
+        <FrameLayout
+            android:layout_width="160dp"
+            android:layout_height="180dp">
+
+            <com.deepguard.app.views.ShieldDotView
+                android:id="@+id/shieldDotView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+
+            <FrameLayout
+                android:id="@+id/logoContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:alpha="0"
+                android:scaleX="0.1"
+                android:scaleY="0.1">
+
+                <ImageView
+                    android:id="@+id/ivLogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_shield_logo"
+                    android:scaleType="fitCenter" />
+            </FrameLayout>
+        </FrameLayout>
+
+        <!-- 16dp gap logo to name -->
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="16dp" />
+
+        <!-- App name — color set via SpannableString in Java -->
+        <TextView
+            android:id="@+id/tvSplashName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DeepGuard"
+            android:textColor="@color/white"
+            android:textSize="42sp"
+            android:fontFamily="sans-serif-black"
+            android:letterSpacing="-0.03"
+            android:shadowColor="@color/neon_cyan"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="20"
+            android:alpha="0"
+            android:scaleX="0.35"
+            android:scaleY="0.35" />
+
+        <!-- 8dp gap name to tagline -->
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="8dp" />
+
+        <!-- Tagline -->
+        <TextView
+            android:id="@+id/tvSplashTagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DEEPFAKE DETECTION"
+            android:textColor="@color/neon_cyan"
+            android:textSize="11sp"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.45"
+            android:alpha="0" />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Top Row: Report ID + Status Badge -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/tvReportId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Report #1"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#1A237E" />
+
+            <TextView
+                android:id="@+id/tvReportStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PENDING"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:background="@drawable/result_badge_fake"
+                android:textColor="@android:color/holo_orange_dark" />
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginBottom="10dp" />
+
+        <!-- User Info -->
+        <TextView
+            android:id="@+id/tvReportUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👤 John Doe"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#37474F"
+            android:layout_marginBottom="2dp" />
+
+        <TextView
+            android:id="@+id/tvReportEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📧 john@example.com"
+            android:textSize="12sp"
+            android:textColor="#78909C"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Category -->
+        <TextView
+            android:id="@+id/tvReportCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🏷 Scan Error"
+            android:textSize="13sp"
+            android:textColor="#5E35B1"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/tvReportDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The scan failed when I uploaded a PNG file..."
+            android:textSize="13sp"
+            android:textColor="#546E7A"
+            android:maxLines="4"
+            android:ellipsize="end"
+            android:background="#F5F7FA"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Date + Action Button Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvReportDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🕐 2025-01-01 10:00:00"
+                android:textSize="11sp"
+                android:textColor="#9E9E9E" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnReportAction"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#C62828"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Take Action"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp" />
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
